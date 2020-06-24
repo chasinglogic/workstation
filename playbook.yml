@@ -1,0 +1,10 @@
+---
+- hosts: workstation
+  roles:
+    - chasinglogic.os_packages
+    - chasinglogic.ansible_users
+    - andrewrothstein.terraform
+    - chasinglogic.linux_power_saving
+    - chasinglogic.dconf_settings
+    - zsh
+    - chasinglogic.updates

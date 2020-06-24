@@ -1,0 +1,16 @@
+---
+- name: install zsh
+  become: true
+  become_user: root
+  package:
+    name: zsh
+
+- name: change shell to zsh
+  become: true
+  become_user: root
+  user:
+    name: "{{ item.username }}"
+    shell: /bin/zsh
+  loop: "{{ zsh_users }}"
+  loop_control:
+    label: "{{ item.username }}"

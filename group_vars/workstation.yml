@@ -14,12 +14,18 @@ users:
       - wheel
       - docker
 
+zsh_users: "{{ users }}"
+
 dconf_settings:
   - name: Set CAPSLOCK as Ctrl and Disable ALTGR on UK keyboards
     key: /org/gnome/desktop/input-sources/xkb-options
     value: "['ctrl:nocaps', 'lv3:ralt_alt']"
 
-generic_packages:
+deb_package_specs: []
+rpm_package_specs: []
+generic_package_specs: []
+
+rpm_packages:
   # Development tooling for GCC C/C++
   - autoconf
   - automake
@@ -70,72 +76,64 @@ generic_packages:
   - aspell
   - aspell-en
 
+  # Text editor
   - neovim
 
-
-deb_packages:
   # C++ Compiler
-  - g++
-  - clangd
+  - gcc-c++
+  - clang-tools-extra
 
-  # Icecream on Ubuntu / Debian
-  - icecc
-  - icecc-monitor
-
-  # Some standard terminfos
-  - ncurses-term
+  # Icecream
+  - icecream
+  - icemon
 
   # Misc tools
-  - ansible-lint
-  - libtool-bin
-  - linux-tools-common  # this provides the perf command
-  - silversearcher-ag
-  - mu4e
-  - python3-proselint
+  - perf
+  - the_silver_searcher
+  - python3-libselinux
+  - python3-ansible-lint
+  - maildir-utils
+  - proselint
+  - libtool
+
+  # MPB dev libs
+  - libxml2-devel
+  - libxslt-devel
+  - python2-devel
+  - mysql
 
   # MongoDB Development Libraries
   - flex
-  - libssl-dev
-  - libsnmp-dev
-  - libsasl2-dev
-  - libcurl4-openssl-dev
-  - libldap-dev
-  - libkrb5-dev
+  - openssl-devel
+  - net-snmp-devel
+  - cyrus-sasl-devel
+  - libcurl-devel
+  - openldap-devel
+  - krb5-devel
 
-  # Python
-  - python3-all
-  - python3-all-dev
-  - python3-pip
-  - python3-venv
-  - pylint
+  # Postgres
+  - postgresql
+  - postgresql-devel
 
   # Ruby
-  - ruby-dev
+  - ruby-devel
 
-  # My preferred font
-  - fonts-firacode
-
-  # Emacs development libraries
-  - libgtk-3-dev
-  - libgif-dev 
-  - libtiff-dev 
-  - libjpeg-dev
-  - libxpm-dev 
-  - gnutls-dev
-  - libncurses-dev
-  - libjansson-dev
+  # Python
+  - python
+  - python-devel
+  - python-pip
+  - python3
+  - python3-devel
+  - python3-pip
+  - python3-pylint
+  
+  # Emacs devel libraries
+  - gtk3-devel
+  - giflib-devel 
+  - libtiff-devel 
+  - libjpeg-devel
+  - libXpm-devel 
+  - gnutls-devel
+  - ncurses-devel
+  - jansson-devel
   - texinfo
-
-  # Maildir Utils libs
-  - libgmime-3.0-dev
-  - libxapian-dev
-
-  # MPB dev libraries
-  - libxml2-dev
-  - libxslt1-dev
-  - libpq-dev
-  - python2-dev
-  - mysql-client
-
-  # Ensure netstat is installed
-  - net-tools

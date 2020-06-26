@@ -1,10 +1,10 @@
 #!/bin/bash
 
 echo "Installing prereqs..."
-sudo apt install -y ansible build-essential python3
+sudo dnf install -y ansible make python
 
 echo "Installing roles"
 ansible-galaxy install -r requirements.yml
 
 echo "Running playbook"
-ansible-playbook playbook.yml
+ansible-playbook -i inventory playbook.yml

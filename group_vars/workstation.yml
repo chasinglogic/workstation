@@ -21,6 +21,10 @@ dconf_settings:
     key: /org/gnome/desktop/input-sources/xkb-options
     value: "['ctrl:nocaps', 'lv3:ralt_alt']"
 
+deb_package_specs: []
+rpm_package_specs: []
+generic_package_specs: []
+
 generic_packages:
   # Development tooling for GCC C/C++
   - autoconf
@@ -30,6 +34,10 @@ generic_packages:
 
   # Virtualization software
   - gnome-boxes
+  
+  # Stuff I wish was included by default
+  - gnome-weather
+  - gnome-clocks
 
   # System monitor
   - htop
@@ -94,6 +102,8 @@ deb_packages:
   - silversearcher-ag
   - mu4e
   - python3-proselint
+
+  - python3-psutil
 
   # MongoDB Development Libraries
   - flex

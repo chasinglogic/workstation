@@ -38,6 +38,7 @@ generic_packages:
   # Stuff I wish was included by default
   - gnome-weather
   - gnome-clocks
+  - geary
 
   # System monitor
   - htop

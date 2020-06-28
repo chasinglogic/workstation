@@ -7,4 +7,4 @@ echo "Installing roles"
 ansible-galaxy install -r requirements.yml
 
 echo "Running playbook"
-ansible-playbook playbook.yml
+ansible-playbook -i inventory playbook.yml

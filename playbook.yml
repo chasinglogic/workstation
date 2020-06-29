@@ -7,3 +7,57 @@
     - chasinglogic.linux_power_saving
     - chasinglogic.dconf_settings
     - zsh
+  tasks:
+    - name: Install python language server
+      become: true
+      become_user: root
+      pip:
+        executable: pip3
+        name:
+          - python-language-server[all]
+    - name: Add docker signing key
+      become: true
+      become_user: root
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        keyring: /usr/share/keyrings/docker.gpg
+    - name: Add docker repository
+      become: true
+      become_user: root
+      apt_repository:
+        repo: |
+          deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable
+        state: present
+        filename: docker
+    - name: Install docker
+      become: true
+      become_user: root
+      apt:
+        update_cache: yes
+        name:
+          - docker-ce
+          - docker-ce-cli
+          - containerd.io
+    - name: Add google cloud signing key
+      become: true
+      become_user: root
+      apt_key:
+        url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+        keyring: /usr/share/keyrings/cloud.google.gpg
+    - name: Add google cloud SDK
+      become: true
+      become_user: root
+      apt_repository:
+        repo: |
+            deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main
+        state: present
+        filename: gcloud
+    - name: Install google cloud sdk repository
+      become: true
+      become_user: root
+      apt:
+        update_cache: yes
+        name:
+          - google-cloud-sdk
+          - google-cloud-sdk-cloud-build-local
+        state: present

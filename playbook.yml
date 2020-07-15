@@ -1,26 +1,26 @@
 ---
 - hosts: workstation
   roles:
-    - chasinglogic.os_packages
-    - chasinglogic.ansible_users
-    - andrewrothstein.terraform
-    - chasinglogic.linux_power_saving
-    - chasinglogic.dconf_settings
-    - zsh
+    #- chasinglogic.os_packages
+    #- chasinglogic.ansible_users
+    #- andrewrothstein.terraform
+    #- chasinglogic.linux_power_saving
+    #- chasinglogic.dconf_settings
+    #- zsh
   tasks:
-    - name: Install python language server
-      become: true
-      become_user: root
-      pip:
-        executable: pip3
-        name:
-          - python-language-server[all]
+    #- name: Install python language server
+    #  become: true
+    #  become_user: root
+    #  pip:
+    #    executable: pip3
+    #    name:
+    #      - python-language-server[all]
     - name: Add docker signing key
       become: true
       become_user: root
       apt_key:
         url: https://download.docker.com/linux/ubuntu/gpg
-        keyring: /usr/share/keyrings/docker.gpg
+        keyring: /etc/apt/trusted.gpg.d/docker.gpg
     - name: Add docker repository
       become: true
       become_user: root

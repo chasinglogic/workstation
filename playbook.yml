@@ -58,6 +58,7 @@
       apt:
         update_cache: yes
         name:
+          - kubectl
           - google-cloud-sdk
           - google-cloud-sdk-cloud-build-local
         state: present

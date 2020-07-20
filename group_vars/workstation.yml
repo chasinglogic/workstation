@@ -36,6 +36,7 @@ generic_packages:
   - gnome-boxes
   
   # Stuff I wish was included by default
+  - gnome-calendar
   - gnome-weather
   - gnome-clocks
   - geary

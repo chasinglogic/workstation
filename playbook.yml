@@ -1,5 +1,12 @@
 ---
 - hosts: workstation
+  pre_tasks:
+    - name: Include variables depending on OS family
+      include_vars: "{{ item }}"
+      with_first_found:
+        - files: ["{{ ansible_facts['os_family'] }}.yml"]
+          skip: true
+          errors: ignore
   roles:
     - chasinglogic.os_packages
     - chasinglogic.ansible_users

@@ -25,16 +25,18 @@ deb_package_specs: []
 rpm_package_specs: []
 generic_package_specs: []
 
-generic_packages:
+rpm_packages:
   # Development tooling for GCC C/C++
   - autoconf
   - automake
   - gcc
+  - gcc-c++
   - llvm
+  - clang-tools-extra
 
   # Virtualization software
   - gnome-boxes
-  
+
   # Stuff I wish was included by default on everything
   - gnome-calendar
   - gnome-weather
@@ -82,4 +84,37 @@ generic_packages:
   - aspell
   - aspell-en
 
+  # Text editor
   - neovim
+
+  # Kubernetes
+  - kubectl
+
+  # Code tools
+  - ripgrep
+  - perf
+
+  # Writing tools
+  - proselint
+
+  # Misc tools and libs
+  - python3-libselinux
+  - python3-ansible-lint
+  - libtool
+  - python3-psutil
+
+  # Postgres
+  - postgresql
+  - postgresql-devel
+
+  # Ruby
+  - ruby-devel
+
+  # Python
+  - python
+  - python-devel
+  - python-pip
+  - python3
+  - python3-devel
+  - python3-pip
+  - python3-pylint

@@ -87,9 +87,6 @@ rpm_packages:
   # Text editor
   - neovim
 
-  # Kubernetes
-  - kubectl
-
   # Code tools
   - ripgrep
   - perf

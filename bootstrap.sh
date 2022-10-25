@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installing prereqs..."
-sudo dnf install -y ansible make python
+sudo apt install -y ansible build-essential python3
 
 echo "Installing roles"
 ansible-galaxy install -r requirements.yml

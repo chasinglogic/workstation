@@ -25,6 +25,10 @@ deb_package_specs: []
 rpm_package_specs: []
 generic_package_specs: []
 
+deb_packages:
+  - nodejs
+  - npm
+
 generic_packages:
   # Development tooling for GCC C/C++
   - autoconf

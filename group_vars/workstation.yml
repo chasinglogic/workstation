@@ -25,17 +25,7 @@ deb_package_specs: []
 rpm_package_specs: []
 generic_package_specs: []
 
-deb_packages:
-  - nodejs
-  - npm
-
 generic_packages:
-  # Development tooling for GCC C/C++
-  - autoconf
-  - automake
-  - gcc
-  - llvm
-
   # Virtualization software
   - gnome-boxes
   
@@ -48,11 +38,6 @@ generic_packages:
   # System monitor
   - htop
 
-  # CCache, Ninja, and Meson
-  - ccache
-  - meson
-  - ninja-build
-
   # Introspection
   - strace
   - ltrace
@@ -60,11 +45,8 @@ generic_packages:
 
   # Misc tools
   - curl
-  - git
   - indent
-  - jq
   - libtool
-  - tmux
 
   # Documentation
   - pandoc
@@ -74,7 +56,7 @@ generic_packages:
 
   # Neovim / Tmux system clipboard support
   - xclip
-  - neovim
+  - wl-clipboard
 
   # PyPI upload tool
   - twine
@@ -82,9 +64,6 @@ generic_packages:
   # Spell checker
   - aspell
   - aspell-en
-
-  # Code tools
-  - ripgrep
 
   # Python
   - python3

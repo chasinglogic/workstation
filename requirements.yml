@@ -1,8 +1,4 @@
 ---
-- src: andrewrothstein.terraform
-  version: v2.2.32
-- src: andrewrothstein.packer
-  version: v2.1.13
 - src: chasinglogic.os_packages
   version: 1.0.1
 

@@ -27,13 +27,13 @@ generic_package_specs: []
 
 generic_packages:
   # Virtualization software
-  - gnome-boxes
-  
-  # Stuff I wish was included by default on everything
-  - gnome-calendar
-  - gnome-weather
-  - gnome-clocks
-  - geary
+  #- gnome-boxes
+  #
+  ## Stuff I wish was included by default on everything
+  #- gnome-calendar
+  #- gnome-weather
+  #- gnome-clocks
+  #- geary
 
   # System monitor
   - htop

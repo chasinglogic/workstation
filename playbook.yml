@@ -8,9 +8,18 @@
           skip: true
           errors: ignore
   roles:
-    - chasinglogic.os_packages
-    - chasinglogic.ansible_users
-    - chasinglogic.linux_power_saving
-    - chasinglogic.dconf_settings
-    - docker
-    - terraform
+    - role: chasinglogic.os_packages
+      when: ansible_system == "Linux"
+    - role: chasinglogic.ansible_users
+      when: ansible_system == "Linux"
+    - role: chasinglogic.linux_power_saving
+      when: ansible_system == "Linux"
+    - role: chasinglogic.dconf_settings
+      when: ansible_system == "Linux"
+    - role: docker
+      when: ansible_system == "Linux"
+    - role: terraform
+      when: ansible_system == "Linux"
+    - role: macos
+      when: ansible_system != "Linux"
+      

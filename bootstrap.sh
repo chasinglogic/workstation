@@ -1,4 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+set -o pipefail
+set -o errexit
+set -x
 
 echo "Installing prereqs..."
 if [[ -f $(which apt) ]]; then

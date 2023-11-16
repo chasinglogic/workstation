@@ -21,19 +21,29 @@ dconf_settings:
     key: /org/gnome/desktop/input-sources/xkb-options
     value: "['ctrl:nocaps', 'lv3:ralt_alt']"
 
-deb_package_specs: []
-rpm_package_specs: []
+deb_package_specs:
+  - python3-dev
+
+rpm_package_specs:
+  - python3-devel
+
 generic_package_specs: []
 
 generic_packages:
   # Virtualization software
   - gnome-boxes
+  - virt-manager
+  - podman
+
+  # You know what it is.
+  - emacs
+  # But it never hurts to have a backup.
+  - neovim
   
   # Stuff I wish was included by default on everything
   - gnome-calendar
   - gnome-weather
   - gnome-clocks
-  - geary
 
   # System monitor
   - htop
@@ -69,3 +79,4 @@ generic_packages:
   - python3
   - python3-pip
   - python3-psutil
+  - python3-requests

@@ -38,6 +38,7 @@ generic_packages:
   # You know what it is.
   - emacs
   # But it never hurts to have a backup.
+  - vim
   - neovim
   
   # Stuff I wish was included by default on everything
@@ -57,6 +58,8 @@ generic_packages:
   - curl
   - indent
   - libtool
+  - ripgrep
+  - fd-find
 
   # Documentation
   - pandoc

@@ -10,7 +10,8 @@
   roles:
     - chasinglogic.os_packages
     - chasinglogic.ansible_users
-    - chasinglogic.linux_power_saving
+    # - chasinglogic.linux_power_saving
     - chasinglogic.dconf_settings
     - docker
     - terraform
+    - zsh

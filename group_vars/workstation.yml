@@ -48,6 +48,8 @@ generic_packages:
 
   # System monitor
   - htop
+  - bind-utils
+  - iputils
 
   # Introspection
   - strace

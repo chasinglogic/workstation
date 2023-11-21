@@ -22,9 +22,11 @@ dconf_settings:
     value: "['ctrl:nocaps', 'lv3:ralt_alt']"
 
 deb_package_specs:
+  - awscli
   - python3-dev
 
 rpm_package_specs:
+  - awscli2
   - python3-devel
 
 generic_package_specs: []
@@ -40,7 +42,7 @@ generic_packages:
   # But it never hurts to have a backup.
   - vim
   - neovim
-  
+
   # Stuff I wish was included by default on everything
   - gnome-calendar
   - gnome-weather

@@ -13,5 +13,4 @@
     # - chasinglogic.linux_power_saving
     - chasinglogic.dconf_settings
     - docker
-    - terraform
     - zsh

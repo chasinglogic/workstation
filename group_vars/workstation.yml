@@ -21,13 +21,21 @@ dconf_settings:
     key: /org/gnome/desktop/input-sources/xkb-options
     value: "['ctrl:nocaps', 'lv3:ralt_alt']"
 
-deb_package_specs:
+deb_package_specs: []
+rpm_package_specs: []
+
+deb_packages:
   - awscli
   - python3-dev
+  - bind9-utils
+  - iputils-ping
+  - traceroute
 
-rpm_package_specs:
+rpm_packages:
   - awscli2
   - python3-devel
+  - bind-utils
+  - iputils
 
 generic_package_specs: []
 
@@ -50,8 +58,6 @@ generic_packages:
 
   # System monitor
   - htop
-  - bind-utils
-  - iputils
 
   # Introspection
   - strace

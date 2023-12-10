@@ -36,6 +36,7 @@ rpm_packages:
   - python3-devel
   - bind-utils
   - iputils
+  - neovim
 
 generic_package_specs: []
 
@@ -45,11 +46,9 @@ generic_packages:
   - virt-manager
   - podman
 
-  # You know what it is.
-  - emacs
-  # But it never hurts to have a backup.
+  # Editor
   - vim
-  - neovim
+  # Neovim on Deb based distros is too old so I compile it from source there.
 
   # Stuff I wish was included by default on everything
   - gnome-calendar
@@ -87,6 +86,10 @@ generic_packages:
   # Spell checker
   - aspell
   - aspell-en
+
+  # Programming tools
+  - golang-go
+  - elixir
 
   # Python
   - python3

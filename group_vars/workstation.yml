@@ -26,7 +26,6 @@ rpm_package_specs: []
 
 deb_packages:
   - awscli
-  - python3-dev
   - bind9-utils
   - iputils-ping
   - traceroute
@@ -45,10 +44,6 @@ generic_packages:
   - gnome-boxes
   - virt-manager
   - podman
-
-  # Editor
-  - vim
-  # Neovim on Deb based distros is too old so I compile it from source there.
 
   # Stuff I wish was included by default on everything
   - gnome-calendar
@@ -69,15 +64,9 @@ generic_packages:
   - libtool
   - ripgrep
   - fd-find
-
-  # Documentation
-  - pandoc
-
-  # Lint / Correctness
-  - yamllint
+  - tmux
 
   # Neovim / Tmux system clipboard support
-  - xclip
   - wl-clipboard
 
   # PyPI upload tool
@@ -89,10 +78,3 @@ generic_packages:
 
   # Programming tools
   - golang-go
-  - elixir
-
-  # Python
-  - python3
-  - python3-pip
-  - python3-psutil
-  - python3-requests

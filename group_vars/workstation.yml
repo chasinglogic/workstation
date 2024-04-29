@@ -13,6 +13,8 @@ users:
       - sudo
       - wheel
       - docker
+      - libvirt
+      - kvm
 
 zsh_users: "{{ users }}"
 
@@ -25,13 +27,11 @@ deb_package_specs: []
 rpm_package_specs: []
 
 deb_packages:
-  - awscli
   - bind9-utils
   - iputils-ping
   - traceroute
 
 rpm_packages:
-  - awscli2
   - python3-devel
   - bind-utils
   - iputils

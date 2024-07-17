@@ -41,14 +41,8 @@ generic_package_specs: []
 
 generic_packages:
   # Virtualization software
-  - gnome-boxes
   - virt-manager
   - podman
-
-  # Stuff I wish was included by default on everything
-  - gnome-calendar
-  - gnome-weather
-  - gnome-clocks
 
   # System monitor
   - htop

@@ -18,6 +18,9 @@ dnf5 install -y \
     docker-compose \
     fish
 
+dnf5 -y copr enable scottames/ghostty
+dnf5 -y install ghostty
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging

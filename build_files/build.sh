@@ -19,7 +19,7 @@ sudo dnf5 install -y @c-development
 sudo dnf5 install -y ncurses-devel
 
 # Requirements for building Ruby
-sudn dnf5 install -y libyaml-devel libffi-devel
+sudo dnf5 install -y libyaml-devel libffi-devel
 
 dnf5 -y copr enable scottames/ghostty
 dnf5 -y install ghostty

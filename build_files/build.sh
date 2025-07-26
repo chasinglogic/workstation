@@ -15,6 +15,9 @@ dnf5 install -y neovim fish
 # Needed by mise to build most tools
 sudo dnf5 install -y @c-development
 
+# Requirments for building Erlang
+sudo dnf5 install -y ncurses-devel
+
 # Requirements for building Ruby
 sudn dnf5 install -y libyaml-devel libffi-devel
 

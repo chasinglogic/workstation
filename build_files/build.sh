@@ -9,12 +9,14 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-# this installs a package from fedora repos
-dnf5 install -y \
-    neovim \
-    containerd \
-    @c-development \
-    fish
+# Install the base packages I want on my system
+dnf5 install -y neovim fish
+
+# Needed by mise to build most tools
+sudo dnf5 install -y @c-development
+
+# Requirements for building Ruby
+sudn dnf5 install -y libyaml-devel libffi-devel
 
 dnf5 -y copr enable scottames/ghostty
 dnf5 -y install ghostty

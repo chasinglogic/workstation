@@ -12,9 +12,8 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 install -y \
     neovim \
-    docker-cli \
     containerd \
-    docker-compose \
+    @c-development \
     fish
 
 dnf5 -y copr enable scottames/ghostty
